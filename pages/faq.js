@@ -1,5 +1,7 @@
 import NextLink from "next/link";
-import {useEffect, useState} from "react";
+
+// getServerSideProps() roda a cada acesso que voce recebe
+// getStaticProps() roda somente em build time
 
 export async function getStaticProps() {
     const FAQ_API_URL = 'https://gist.githubusercontent.com/omariosouto/0ceab54bdd8182cbd1a4549d32945c1a/raw/578ad1e8e5296fa048e3e7ff6b317f7497b31ad9/alura-cases-faq.json'
@@ -20,11 +22,6 @@ export async function getStaticProps() {
 }
 
 export default function FAQPage({faq}) {
-    console.log(faq)
-    // const [faq, setFaq] = useState([])
-    // useEffect(() => {
-    // }, [])
-
     return (
         <>
             <h1>Alura Cases - FAQ</h1>

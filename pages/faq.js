@@ -1,4 +1,5 @@
 import NextLink from "next/link";
+import Head from "next/head";
 
 // getServerSideProps() roda a cada acesso que voce recebe
 // getStaticProps() roda somente em build time
@@ -24,6 +25,9 @@ export async function getStaticProps() {
 export default function FAQPage({faq}) {
     return (
         <>
+            <Head>
+                <title>FAQ - Alura Cases Campanha</title>
+            </Head>
             <h1>Alura Cases - FAQ</h1>
             <NextLink href='/'>Ir para a home</NextLink>
             <ul>
